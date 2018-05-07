@@ -19,7 +19,7 @@
 Route::get('login', 'SessionsController@create')->name('login');
 Route::post('login', 'SessionsController@store')->name('login');
 Route::delete('logout', 'SessionsController@destroy')->name('logout');
-Route::get('/help', 'StaticController@help')->name('help');
+Route::get('/', 'StaticController@help')->name('help');
 Route::get('/name', 'StaticController@show')->name('show');
 /*Route::resource('buys','BuysController');*/
 Route::resource('admin','AdminController');
