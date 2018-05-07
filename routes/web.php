@@ -31,3 +31,29 @@ Route::resource('goodscate','GoodscateController');
 Route::post('/upload', 'UploaderController@upload');
 
 Route::resource('activity','ActivityController');
+Route::resource('Addoder','AddoderController');
+//日订单
+Route::get('/care', 'AddoderController@care')->name('care');
+Route::get('/show', 'AddoderController@show1')->name('show1');
+//月订单
+Route::get('/care1', 'AddoderController@care1')->name('care1');
+Route::get('/show1', 'AddoderController@show2')->name('show2');
+//总数
+Route::get('/care2', 'AddoderController@care2')->name('care2');
+//菜订单
+Route::get('/goods1', 'AddoderController@goods')->name('goods');
+//Route::get('/goods1', 'AddoderController@show1')->name('goods');
+//日菜订单
+Route::get('/goods2', 'AddoderController@goods2')->name('goods2');
+Route::get('/show3', 'AddoderController@show3')->name('show3');
+//月菜订单
+Route::get('/goods3', 'AddoderController@goods3')->name('goods3');
+Route::get('/show4', 'AddoderController@show4')->name('show4');
+
+//活动
+Route::resource('events','EventController');
+//
+Route::get('/event', 'EventController@hert')->name('hert');
+
+
+
