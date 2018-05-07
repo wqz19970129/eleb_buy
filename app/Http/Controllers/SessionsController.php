@@ -42,7 +42,7 @@ class SessionsController extends Controller
           $status=Admin::where('p_id','=',$id)->value('status');
         //var_dump($status);die;
 
-        if(Auth::attempt(['name'=>$request->name,'password'=>$request->password,'status'=>1],$request->has('remember'))){
+        if(Auth::attempt(['name'=>$request->name,'password'=>$request->password],$request->has('remember'))){
             session()->flash('success','登陆成功,审核通过');
             //$p_id=Auth::user()->id;
             //$id=DB::table('admins')->where('p_id',$p_id)->value('id');
